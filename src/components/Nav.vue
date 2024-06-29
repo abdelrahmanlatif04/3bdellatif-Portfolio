@@ -57,7 +57,6 @@ export default {
         { title: "About", href: "#about" },
         { title: "Portfolio", href: "#portfolio" },
         { title: "Contact", href: "#contact" },
-,
       ],
     };
   },
