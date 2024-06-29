@@ -34,7 +34,7 @@ import NavBar from "../src/components/Nav.vue";
 export default {
   data() {
     return {
-      theme: "light",
+      theme: "dark",
     };
   },
   methods: {
