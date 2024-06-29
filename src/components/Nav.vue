@@ -12,7 +12,7 @@
         class="aspect-square smooth h-4 relative rounded-full bg-orange-500 before:aspect-square before:absolute before:smooth before:rounded-full"
         :class="
           theme == 'light'
-            ? 'left-0 bg-orange-400 before:bg-orange-600 before:w-4/5 before:right-1/2 before:top-1/2 before:translate-x-1/2 before:-translate-y-1/2'
+            ? 'left-0 bg-orange-400 before:bg-orange-600 before:w-2/3 before:right-1/2 before:top-1/2 before:translate-x-1/2 before:-translate-y-1/2'
             : 'left-full -translate-x-full bg-white before:bg-sky-600 before:w-4/5 before:right-0 before:top-0'
         "
       ></div>
@@ -25,24 +25,20 @@
     >
       <img
         class="absolute top-1/2 -translate-y-1/2 w-1/2 right-[1px]"
-        v-if="!state"
-        src="../assets/left-arrow.png"
-        alt=""
-      />
-      <img
-        class="absolute top-1/2 -translate-y-1/2 w-1/2 right-[1px]"
-        v-else
-        src="../assets/right-arrow.png"
+        :class="`${state ? 'rotate-180 ' : 'rotate-0'} ${
+          theme == 'dark' ? 'invert-[60%]' : 'invert-[30%]'
+        }`"
+        src="../assets/arrow.png"
         alt=""
       />
     </span>
     <ul
-      class="flex flex-col justify-center items-center w-full h-full gap-4 text-2xl font-semibold tracking-widest md:flex-row p-3 md:text-lg md:justify-evenly"
+      class="flex flex-col justify-center items-center w-full h-full gap-8 text-2xl font-semibold tracking-widest md:flex-row p-3 md:text-lg md:justify-evenly"
     >
       <li v-for="link in links" :key="link">
         <a
           class="smooth hover:opacity-25"
-          :class="theme == 'dark' ? 'text-white' : 'text-black'"
+          :class="theme == 'dark' ? 'text-white' : 'text-[#fa0]'"
           :href="link.href"
           >{{ link.title }}</a
         >
@@ -51,19 +47,16 @@
   </div>
 </template>
 
-<style scoped></style>
-
 <script>
 export default {
   data() {
     return {
       state: false,
       links: [
-        { title: "link 1", href: "#" },
-        { title: "link 2", href: "#" },
-        { title: "link 3", href: "#" },
-        { title: "link 4", href: "#" },
-        { title: "link 5", href: "#" },
+        { title: "Home", href: "#home" },
+        { title: "About", href: "#about" },
+        { title: "Portfolio", href: "#portfolio" },
+        { title: "Contact", href: "#contact" },
       ],
     };
   },
@@ -84,3 +77,5 @@ export default {
   props: ["link", "theme"],
 };
 </script>
+
+<style scoped></style>
