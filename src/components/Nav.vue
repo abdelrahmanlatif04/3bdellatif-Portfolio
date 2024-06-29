@@ -2,7 +2,7 @@
   <div
     :class="`${theme == 'dark' ? 'bg-primary-dark' : 'bg-primary-light'}     
     ${state ? '-translate-x-full' : 'translate-x-0'}`"
-    class="w-[45%] h-full relative smooth md:translate-x-0 md:w-full md:h-fit"
+    class="w-[45%] h-full fixed md:absolute smooth md:translate-x-0 md:w-full left-0 top-0 md:h-fit"
   >
     <div
       class="theme-btn absolute left-3 top-3 p-1 flex items-center h-6 aspect-[2] rounded-xl cursor-pointer bg-sky-600"
@@ -63,6 +63,25 @@ export default {
   methods: {
     toggle() {
       this.state = !this.state;
+    },
+    asd() {
+      let lastScrollTop = 0;
+      const navbar = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", function () {
+        let scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+          // Downscroll
+          navbar.style.top = "-60px";
+        } else {
+          // Upscroll
+          navbar.style.top = "0";
+        }
+
+        lastScrollTop = scrollTop;
+      });
     },
   },
   computed: {
