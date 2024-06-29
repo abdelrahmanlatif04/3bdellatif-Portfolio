@@ -57,6 +57,7 @@ export default {
         { title: "About", href: "#about" },
         { title: "Portfolio", href: "#portfolio" },
         { title: "Contact", href: "#contact" },
+,
       ],
     };
   },
@@ -77,5 +78,3 @@ export default {
   props: ["link", "theme"],
 };
 </script>
-
-<style scoped></style>
