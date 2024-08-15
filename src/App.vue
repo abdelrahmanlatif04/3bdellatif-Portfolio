@@ -43,7 +43,7 @@
           you can visit my Social Hub
           <a
             target="_blank"
-            href="https://3bdellatiif-social-links.vercel.app/"
+            href="https://3bdellatiif-linkhub.vercel.app/"
             class="underline underline-offset-2 hover:opacity-60 hover:underline-offset-4 text-[#fa0] smooth"
             >here</a
           >
