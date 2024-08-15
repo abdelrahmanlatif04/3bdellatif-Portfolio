@@ -59,7 +59,7 @@
           class="h-5 flex justify-center items-center gap-3 cursor-pointer hover:opacity-55 smooth"
         >
           
-<a>
+<a class="w-full h-full" :href="item.dist">
 <img :src="item.img" class="h-full invert" />
 {{ item.title }}
 <a/>
