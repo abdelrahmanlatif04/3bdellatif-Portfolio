@@ -58,8 +58,12 @@
           :key="item"
           class="h-5 flex justify-center items-center gap-3 cursor-pointer hover:opacity-55 smooth"
         >
-          <img :src="item.img" class="h-full invert" />
-          {{ item.title }}
+          
+<a>
+<img :src="item.img" class="h-full invert" />
+{{ item.title }}
+<a/>
+          
         </li>
       </ul>
     </section>
