@@ -1,6 +1,6 @@
 <template>
   <div
-    class="smooth flex flex-col font-mono h-[300vh] md:py-0 py-5"
+    class="smooth flex flex-col h-[300vh]"
     :class="
       theme == 'dark'
         ? 'bg-secondary-dark text-white'
@@ -8,25 +8,6 @@
     "
   >
     <NavBar :theme="theme" @changeTheme="changeTheme" />
-    <!-- <section
-      id="home"
-      class="flex flex-col sm:flex-row gap-8 text-center items-center sm:text-3xl text-sm sm:text-start"
-    >
-    <div class="w-1/2">
-      <img
-        src="./assets/avatar.jpg"
-        class="rounded-full border-4 border-white"
-      />
-    </div>
-      <div class="header flex flex-col justify-center w-1/2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident id
-        maiores expedita repudiandae nihil, nobis dolore quae atque perferendis
-        saepe minima, asperiores repellat, adipisci quasi harum officia unde
-        quod temporibus! Labore, facere quae! Lorem ipsum dolor, sit amet
-        consectetur adipisicing elit. Aspernatur, nihil!
-      </div>
-    </section> -->
-
     <section id="header">
       <div class="title">Header</div>
     </section>
@@ -51,19 +32,20 @@
         or contact me directly using these links
       </div>
       <ul
-        class="flex justify-around gap-y-10 gap-5 mt-6 flex-wrap max-w-[800px] mx-auto text-lg"
+        class="grid grid-cols-2 md:grid-cols-4 gap-5 justify-start mt-6 max-w-[800px] mx-auto text-lg"
       >
         <li
           v-for="item in contacts"
           :key="item"
-          class="h-5 flex justify-center items-center gap-3 cursor-pointer hover:opacity-55 smooth"
+          class="h-5 cursor-pointer hover:opacity-55 smooth"
         >
-          
-<a class="w-full h-full" :href="item.dist">
-<img :src="item.img" class="h-full invert" />
-{{ item.title }}
-<a/>
-          
+          <a
+            class="w-full h-full flex justify-center items-center gap-3"
+            :href="item.dist"
+          >
+            <img :src="item.img" class="h-full invert" />
+            {{ item.title }}
+          </a>
         </li>
       </ul>
     </section>
