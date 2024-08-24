@@ -25,9 +25,9 @@ export default {
   components: {
     NavBar,
     Header,
-    //  About,
+    About,
     Portfolio,
-    //  Contact
+    Contact,
   },
 };
 </script>
