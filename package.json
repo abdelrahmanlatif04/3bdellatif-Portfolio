@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nodemailer": "^6.9.14",
     "vue": "^3.4.29"
   },
   "devDependencies": {
