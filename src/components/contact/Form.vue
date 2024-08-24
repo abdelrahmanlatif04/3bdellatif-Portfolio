@@ -55,8 +55,8 @@ export default {
   methods: {
     submit() {
       // each input validation
-      // email regax
-      // sending email procces
+      // email regex
+      // sending email process
       if (
         this.contactForm.name &&
         this.contactForm.message &&
@@ -75,6 +75,6 @@ textarea {
   @apply px-4 py-2 rounded-lg w-full mt-2 focus:outline-none text-black;
 }
 label {
-  @apply cursor-pointer pl-2 ;
+  @apply cursor-pointer pl-2;
 }
 </style>
