@@ -13,22 +13,16 @@
 
 <script>
 import NavBar from "../src/components/Nav.vue";
-import Header from "./components/header/header.vue";
-import About from "../src/components/about/about.vue";
+import Header from "./components/header/Header.vue";
+import About from "../src/components/about/About.vue";
 import Portfolio from "../src/components/portfolio/Portfolio.vue";
-import Contact from "../src/components/contact/contact.vue";
+import Contact from "../src/components/contact/Contact.vue";
 
 export default {
   data() {
     return { NavState: false };
   },
-  components: {
-    NavBar,
-    Header,
-    About,
-    Portfolio,
-    Contact,
-  },
+  components: { NavBar, Header, About, Portfolio, Contact },
 };
 </script>
 
