@@ -17,9 +17,10 @@
         />
       </span>
       <div v-for="link in links" :key="link" class="w-full flex justify-center">
-        <a class="smooth hover:opacity-25 text-white" :href="link.href">{{
-          link.title
-        }}</a>
+        <a class="smooth hover:opacity-25 text-white" :href="link.href">
+          <img :src="link.img" alt="" />
+          <p>{{ link.title }}</p>
+        </a>
       </div>
     </div>
   </div>
@@ -31,10 +32,10 @@ export default {
     return {
       state: true,
       links: [
-        { title: "Home", href: "#home" },
-        { title: "About", href: "#about" },
-        { title: "Portfolio", href: "#portfolio" },
-        { title: "Contact", href: "#contact" },
+        { title: "Home", href: "#home", img: "/home.png" },
+        { title: "About", href: "#about", img: "/about.png" },
+        { title: "Portfolio", href: "#portfolio", img: "/portfolio.png" },
+        { title: "Contact", href: "#contact", img: "/contact.png" },
       ],
     };
   },
