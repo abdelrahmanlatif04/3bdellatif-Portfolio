@@ -1,5 +1,5 @@
 <template>
-  <section class="pb-2">
+  <section class="pb-2" id="contact">
     <div class="title">Contact Me :)</div>
     <div class="my-6 sm:text-xl tracking-tighter ml-2">
       you can visit my Links hub
@@ -68,4 +68,3 @@ export default {
   components: { Form },
 };
 </script>
-

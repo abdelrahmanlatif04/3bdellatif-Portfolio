@@ -12,11 +12,11 @@
 </template>
 
 <script>
-import NavBar from "../src/components/Nav.vue";
-import Header from "./src/components/header/header.vue";
-import About from "@/src/components/about/about.vue";
-import Portfolio from "@/src/components/portfolio/Portfolio.vue";
-import Contact from "@/src/components/contact/Contact.vue";
+import NavBar from "./components/Nav.vue";
+import Header from "./components/header/Header.vue";
+import About from "./components/about/About.vue";
+import Portfolio from "./components/portfolio/Portfolio.vue";
+import Contact from "./components/contact/Contact.vue";
 
 export default {
   data() {
